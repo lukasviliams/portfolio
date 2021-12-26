@@ -12,7 +12,57 @@
 /* Font families */
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;700&family=Public+Sans&display=swap');
 
-html{
+.font-h1{
     font-family: 'Ibarra Real Nova', serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: -0.45px;
+}
+.font-h2{
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 40px;
+    line-height: 42px;
+    font-weight: 700;
+    letter-spacing: -0.36px;
+}
+.font-h3{
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.29px;
+}
+.font-body1{
     font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0;
+}
+.font-body2{
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0;
+}
+
+
+/* Reset */
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    color: var(--grayish-dark-blue);
+}
+
+*{
+    margin: 0;
+}
+*::before, *::after{
+    box-sizing: inherit;
+}
+::selection{
+    background-color: var(--grayish-dark-blue);
+    color: var(--light-gray);
 }
