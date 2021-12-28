@@ -9,8 +9,27 @@
     --bright-red:rgb(244,48,48);
 }
 
+/* Reset */
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    color: var(--grayish-dark-blue);
+}
+
+*{
+    margin: 0;
+}
+*::before, *::after{
+    box-sizing: inherit;
+}
+::selection{
+    background-color: var(--grayish-dark-blue);
+    color: var(--light-gray);
+}
+
 /* Font families */
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;700&family=Public+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;700&family=Public+Sans:wght@400;600&display=swap');
+
 
 .font-h1{
     font-family: 'Ibarra Real Nova', serif;
@@ -47,22 +66,69 @@
     line-height: 30px;
     letter-spacing: 0;
 }
-
-
-/* Reset */
-html{
-    box-sizing: border-box;
-    font-size: 62.5%;
+/* ******************Buttons********************* */
+/* Primary button */
+.btn-primary{
+    width: 200px;
+    height: 48px;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: var(--dark-blue);
+    border: none;
+  
+    display: flex;
+    justify-content: flex-start;
+    gap: 20%;
+    align-items: center;
+  
+    transition: all .2s ease-in;
+  }
+  .btn-primary:hover{
+    background-color: var(--slightly-desaturated-cayn);
+  }
+  .btn-primary:hover svg g{
+    transition: all .2s ease-in;
+    stroke: #ffffff;
+  }
+  .btn-primary:disabled{
+    background-color: var(--light-gray)
+  }
+  .btn-primary:disabled svg g{
+    stroke: #ffffff;
+  }
+  .btn-primary:active{
+    background-color: rgb(220, 220, 220);
+  }
+  .btn-primary:active svg g{
+    stroke: #ffffff;
+  }
+  /* Secondary button */
+  .btn-secondary{
+    width: 162px;
+    height: 48px;
+    background-color: #ffffff;
     color: var(--grayish-dark-blue);
-}
-
-*{
-    margin: 0;
-}
-*::before, *::after{
-    box-sizing: inherit;
-}
-::selection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border: 1px solid var(--grayish-dark-blue);
+    
+    transition: all .2s ease-in;
+  }
+  .btn-secondary:hover{
+    color: var(--very-light-gray);
     background-color: var(--grayish-dark-blue);
-    color: var(--light-gray);
-}
+  }
+  .btn-secondary:disabled, .btn-secondary:active {
+    border: 1px solid var(--slightly-desaturated-cayn);
+    color: var(--slightly-desaturated-cayn);
+  }

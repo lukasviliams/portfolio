@@ -1,14 +1,31 @@
-/* eslint-disable vue/no-multiple-template-root */
 <template>
   <div id="nav">
-    <router-link to="/">
-      Home
-    </router-link> |
-    <router-link to="/about">
-      About
-    </router-link>
-    <router-view />
-    <button class="btn-primary">
+    <div class="navigation_container">
+      <div class="svg_container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="61"
+          height="32"
+        ><path
+          fill="#33323D"
+          fill-rule="evenodd"
+          d="M60.082 5.878L44.408 32 28.735 5.878h31.347zM15.673 0l15.674 26.122H0L15.673 0z"
+        /></svg>
+      </div>
+      <div class="links_container">
+        <router-link :to="{name:'Home'}">
+          Home
+        </router-link> 
+        <router-link :to="{name:'Portfolio'}">
+          Portfolio
+        </router-link>
+        <router-link :to="{name: 'Contact'}">
+          Contact me
+        </router-link>
+      </div>
+    </div>
+    <!-- Buttons -->
+    <!-- <button class="btn-primary">
       <svg
         class="btn-svg"
         xmlns="http://www.w3.org/2000/svg" 
@@ -35,66 +52,51 @@
       </svg>
       About me
     </button>
+    <button class="btn-secondary">
+      Contact me
+    </button> -->
+    <router-view />
   </div>
 </template>
 
 <style>
 #app {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--grayish-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-#nav {
-  padding: 30px;
+.navigation_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  padding-top: 5rem ;
 }
-
+.links_container{
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  color: var(--grayish-dark-blue);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
-}
-
-/* ******************Buttons********************* */
-/* Primary button */
-.btn-primary{
-  width: 200px;
-  height: 48px;
-  font-family: 'Public Sans', sans-serif;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: var(--dark-blue);
-  border: none;
-
-  display: flex;
-  justify-content: flex-start;
-  gap: 20%;
-  align-items: center;
-
-  transition: all .2s ease-in;
-}
-.btn-primary:hover{
-  background-color: var(--slightly-desaturated-cayn);
-}
-.btn-primary:hover svg g{
-  transition: all .2s ease-in;
-  stroke: #ffffff;
-}
-.btn-primary:disabled{
-  background-color: var(--light-gray)
-}
-.btn-primary:disabled svg g{
-  stroke: #ffffff;
-}
-.btn-primary:active{
-  background-color: rgb(220, 220, 220);
-}
-.btn-primary:active svg g{
-  stroke: #ffffff;
+  color: var(--slightly-desaturated-cayn)
 }
 </style>
