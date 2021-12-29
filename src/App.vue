@@ -55,7 +55,12 @@
     <button class="btn-secondary">
       Contact me
     </button> -->
-    <router-view />
+    <transition
+      name="fade"
+      mode="out-in"
+    >
+      <router-view :key="$route.path" />
+    </transition>
   </div>
 </template>
 
@@ -79,8 +84,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80vw;
-  padding-top: 5rem ;
+  padding: 5rem 10vw 0 10vw;
 }
 .links_container{
   width: 20%;
@@ -98,5 +102,17 @@
 
 #nav a.router-link-exact-active {
   color: var(--slightly-desaturated-cayn)
+}
+/* Router animations */
+.fade-enter-active, 
+.fade-leave-active{
+  transition: all .2s ease-in;
+}
+
+.fade-enter-from{
+  opacity: 0;
+} 
+.fade-leave-to{
+  opacity: 0;
 }
 </style>
