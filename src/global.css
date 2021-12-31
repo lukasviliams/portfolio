@@ -15,6 +15,7 @@ html{
     font-size: 62.5%;
     color: var(--grayish-dark-blue);
     background-color: var(--very-light-gray);
+    scroll-behavior: smooth;
 }
 
 *{
@@ -85,7 +86,8 @@ html{
     justify-content: flex-start;
     gap: 20%;
     align-items: center;
-  
+
+    cursor: pointer;
     transition: all .2s ease-in;
   }
   .btn-primary:hover{
@@ -122,8 +124,9 @@ html{
     font-size: 12px;
     letter-spacing: 2px;
     border: 1px solid var(--grayish-dark-blue);
-    
-    transition: all .2s ease-in;
+
+    cursor: pointer;
+    transition: all .2s ease;
   }
   .btn-secondary:hover{
     color: var(--very-light-gray);

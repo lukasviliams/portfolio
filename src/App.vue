@@ -79,15 +79,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .navigation_container{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5rem 10vw 0 10vw;
+  padding: 5rem 15rem 0 15rem;
 }
 .links_container{
-  width: 20%;
+  width: 30rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,6 +99,7 @@
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 #nav a.router-link-exact-active {
