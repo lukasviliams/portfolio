@@ -1,22 +1,29 @@
 <template>
   <div class="hero_portrait-component">
-    <div class="hero_portrait_image-container">
-      <picture>
-        <source>
-        <source>
-        <source>
-        <img
-          class="hero_portrait_image-img"
-          src="../assets/images/homepage/desktop/image-homepage-profile.jpg"
-          alt="img"
-        >
-      </picture>
-    </div>
-    <div class="hero_portrait_text-container">
+    <picture>
+      <source
+        media="(max-width: 670px)"
+        srcset="../assets/images/homepage/mobile/image-homepage-profile.jpg"
+      >
+      <source
+        media="(max-width: 950px)"
+        srcset="../assets/images/homepage/tablet/image-homepage-profile.jpg"
+      >
+      <source
+        media="(max-width: 1500px)"
+        srcset="../assets/images/homepage/desktop/image-homepage-profile.jpg"
+      >
+      <img
+        class="hero_portrait_image-img"
+        src="../assets/images/homepage/desktop/image-homepage-profile@2x.jpg"
+        alt="img"
+      >
+    </picture>
+    <div class="hero_portrait_text-parrent">
       <div class="line" />
       <div class="hero_portrait_text-container">
         <p class="font-h2">
-          About me
+          About Me
         </p>
         <p class="font-body1">
           I’m a junior front-end developer looking for a new role in an exciting company. 
@@ -27,10 +34,10 @@
           I love being out in nature whether that’s going for a walk, run or cycling. 
           I’d love you to check out my work.
         </p>
-        <button class="btn-secondary">
-          Go to portfolio
-        </button>
       </div>
+      <button class="btn-secondary">
+        Go to portfolio
+      </button>
       <div class="line" />
     </div>
   </div>
@@ -42,9 +49,101 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.hero_portrait-component{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10vw;
+  margin: 20vh 0 14vh 8vw;
+  width: 90vw;
+}
+.hero_portrait_image-img{
+  height: 100%;
+  width: auto;
+  max-height: 60rem;
+}
+.hero_portrait_text-parrent{
+  height: 60rem;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 .line{
-    width: 10rem;
-    border-bottom: 1px solid var(--grayish-dark-blue);;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(51,50,61, .2);
+}
+.font-h2{
+  text-align: left;
+  margin-bottom: 3rem;
+}
+.font-body1{
+  text-align: left;
+}
+/* ***************Responsive design*********************** */
+@media only screen and (max-width: 1220px) {
+  .hero_portrait_text-parrent{
+    width: 30vw;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .hero_portrait-component{
+    gap: 5vw;
+  }
+  .hero_portrait_image-img{
+    max-height: 40rem;
+  }
+  .hero_portrait_text-parrent {
+    height: 40rem;
+    width: 50vw;
+  }
+  .font-h2{
+    margin-bottom: 1.5rem;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .hero_portrait_image-img {
+    max-height: 60rem;
+  }
+  .hero_portrait_text-parrent{
+    height: 60rem;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .hero_portrait-component {
+    flex-direction: column;
+    margin-top: 10vh;
+    margin-left: 0;
+  }
+  .hero_portrait_text-parrent{
+    height: fit-content;
+    width: 80%;
+  }
+  .hero_portrait_text-container{
+    margin-top: 3rem;
+  }
+  .font-body1 { 
+    margin-bottom: 2rem;
+  }
+  .btn-secondary {
+    margin-bottom: 4rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .hero_portrait-component {
+    width: fit-content;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .font-h2 {
+    font-size: 40px;
+  }
+  .btn-secondary {
+    width: 202px;
+  }
 }
 </style>

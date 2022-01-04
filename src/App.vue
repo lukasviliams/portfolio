@@ -79,13 +79,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 .navigation_container{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5rem 15rem 0 15rem;
+  margin: 8vh 8vw 0 8vw;
 }
 .links_container{
   width: 30rem;
@@ -105,7 +104,7 @@
 #nav a.router-link-exact-active {
   color: var(--slightly-desaturated-cayn)
 }
-/* Router animations */
+/* **********************Router animations ****************************/
 .fade-enter-active, 
 .fade-leave-active{
   transition: all .2s ease-in;
@@ -117,4 +116,5 @@
 .fade-leave-to{
   opacity: 0;
 }
+/* **********************responsive desingn ****************************/
 </style>

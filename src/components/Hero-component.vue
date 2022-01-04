@@ -3,20 +3,20 @@
     <div class="hero_image-container">
       <picture>
         <source
-          media="(min-width: 769px)"
-          srcset="../assets/images/homepage/desktop/image-homepage-hero.jpg"
+          media="(max-width:450px)"
+          srcset="../assets/images/homepage/mobile/image-homepage-hero.jpg"
         >
         <source
-          media="(min-width: 376px)"
+          media="(max:width:768px)"
           srcset="../assets/images/homepage/tablet/image-homepage-hero.jpg"
         >
         <source
-          media="(min-width: 1px)"
-          srcset="../assets/images/homepage/mobile/image-homepage-hero.jpg"
+          media="(max-width: 1440px)"
+          srcset="../assets/images/homepage/desktop/image-homepage-hero.jpg"
         >
         <img
           class="hero_image-img"
-          src="../assets/images/homepage/desktop/image-homepage-hero.jpg"
+          src="../assets/images/homepage/desktop//image-homepage-hero@2x.jpg"
           alt="img"
         >
       </picture>
@@ -66,6 +66,7 @@ export default {
 
 <style scoped>
 .hero_component_parrent{
+  margin-top: 10vh;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   grid-template-rows: repeat(16, 1fr);
@@ -77,7 +78,7 @@ export default {
 .hero_image-img{
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
   display: block;
 }
 .hero_text-parrent {
@@ -95,5 +96,99 @@ export default {
   padding-top: 20%;
   padding-right: 18%;
   text-align: left;
+}
+.btn-primary{
+  font-weight: 400;
+}
+
+/* *****************Responsive design ***************************/
+@media only screen and (max-width: 1100px) {
+  .hero_component_parrent {
+    grid-template-rows: repeat(12, 1fr);
+  }
+  .font-h1{
+    letter-spacing: -0.36px;
+    font-size: 40px;
+    padding: 0;
+  }
+.hero_image-container{
+  grid-row: 1 / span 12;
+}
+.hero_text-parrent {
+  grid-column: 3 / span 15;
+  grid-row: 8 / span 5;
+} 
+.hero_text-content{
+  width: 40rem;
+}
+}
+@media only screen and (max-width: 950px){
+  .hero_component_parrent {
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .hero_image-container{
+  grid-column: 3 / span 20;
+  grid-row: 1 / span 6 ;
+}
+.hero_text-parrent {
+  grid-row: 4 / span 3  ;
+}
+}
+@media only screen and (max-width: 900px) {
+.font-h1 {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 800px) {
+.hero_text-parrent {
+  grid-row: 4 / span 3  ;
+}
+}
+@media only screen and (max-width: 670px) {
+  .hero_component_parrent{
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+  }
+.hero_text-parrent {
+  grid-column: 3 / span 20;
+  grid-row: 7 / span 3  ;
+}
+.hero_text-content{
+  width: 100%;
+}
+.font-h1 {
+  margin-bottom: 2rem;
+}
+}
+@media only screen and (max-width: 562px) {
+.hero_component_parrent {
+  grid-template-rows: repeat(7, 1fr);
+  margin-top: 5vh;
+}
+.hero_image-container{
+  grid-column: 3 / span 20;
+  grid-row: 1 / span 4 ;
+}
+.hero_text-parrent {
+  grid-row: 5 / span 3  ;
+}
+}
+@media only screen and (max-width:450px) {
+.hero_component_parrent {
+  grid-template-rows: repeat(5, 1fr);
+}
+.hero_image-container{
+  grid-column: 3 / span 21;
+  grid-row: 1 / span 3 ;
+}
+.hero_text-parrent {
+  grid-column: 3 / span 21;
+  grid-row: 4 / span 2  ;
+}
+.font-h1 {
+  font-size: 40px;
+  line-height: 42px;
+}
 }
 </style>

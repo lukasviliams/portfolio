@@ -72,7 +72,6 @@ export default {
 
 <style scoped>
 .footer-parrent{
-    width: 100vw;
     height: 8rem;
     display: flex;
     justify-content: center;
@@ -84,10 +83,10 @@ export default {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 15rem 0 15rem;
+    padding: 0 8vw 0 8vw;
 }
 .router_component{
-    width: 30%;
+    width: 40rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,5 +111,28 @@ export default {
 }
 .media_icon-linkedin :hover{
     fill: #2867B2;
+}
+
+/* **************************Responsive design**************************** */
+
+@media only screen and (max-width: 670px) {
+.footer-parrent{
+  height: fit-content;
+}
+.footer-component, .router_component {
+  flex-direction: column;
+}
+.router_component *{
+  margin-bottom: 3rem;
+}
+.media_container {
+  margin-bottom: 5rem;
+}
+.router_component{
+  margin-top: 5rem;
+}
+  .footer-component {
+    padding: 0;
+  }
 }
 </style>
