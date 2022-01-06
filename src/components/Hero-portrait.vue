@@ -44,7 +44,28 @@
 </template>
 
 <script>
+import { onMounted } from '@vue/runtime-core'
 export default {
+  name:'HeroPortrait', 
+  setup() {
+    onMounted(()=>{
+      const portrait = document.querySelector('.hero_portrait-component')
+      // console.log(portrait);
+      const visiblePortrait = function (entries) {
+        const entry = entries[0]
+        console.log(entry);
+        if(entry.isIntersecting) {
+          portrait.classList.add('visible')
+        }
+      }
+      const observer = new IntersectionObserver(visiblePortrait, {
+        root: null, 
+        threshold: 0
+      })
+
+      observer.observe(portrait)
+    })
+  }
 
 }
 </script>
@@ -57,6 +78,8 @@ export default {
   gap: 10vw;
   margin: 20vh 0 14vh 8vw;
   width: 90vw;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 .hero_portrait_image-img{
   height: 100%;
@@ -82,6 +105,10 @@ export default {
 }
 .font-body1{
   text-align: left;
+}
+/* ********************Anoimation************************* */
+.visible{
+  opacity: 1;
 }
 /* ***************Responsive design*********************** */
 @media only screen and (max-width: 1220px) {

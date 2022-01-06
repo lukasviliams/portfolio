@@ -13,8 +13,31 @@
 </template>
 
 <script>
+import { onMounted } from '@vue/runtime-core'
 export default {
+  name: 'FooterComponent', 
+  setup() {
+    onMounted(()=>{
+      const footer = document.querySelector('.footer_contact-container')
 
+      const movingFooter = function(entries) {
+        const entry = entries[0]
+        // console.log(entry);
+        if(entry.isIntersecting) {
+          footer.classList.add('visible')
+        }
+      }
+
+      const observer = new IntersectionObserver(movingFooter, {
+        root:null, 
+        threshold: 0,
+      })
+      observer.observe(footer)
+
+
+
+    })
+  }
 }
 </script>
 
@@ -24,6 +47,8 @@ export default {
     justify-content: space-between;
     align-items: center;
     margin: 0 8vw 14vh 8vw;
+    transition: all 1s ease;
+    opacity: 0;
 }
 .font-h2{
     width: 35rem;
@@ -32,6 +57,10 @@ export default {
     width: calc(100% - (38rem + 192px));
     border-bottom: 1px solid var(--grayish-dark-blue);;
 }
+.visible{
+  opacity: 1;
+}
+
 /* ***************************Responsive design*************************** */
 
 @media only screen and (max-width: 670px) {
