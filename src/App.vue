@@ -12,7 +12,10 @@
           d="M60.082 5.878L44.408 32 28.735 5.878h31.347zM15.673 0l15.674 26.122H0L15.673 0z"
         /></svg>
       </div>
-      <div class="links_container">
+      <div
+        ref="links"
+        class="links_container"
+      >
         <router-link :to="{name:'Home'}">
           Home
         </router-link> 
@@ -22,6 +25,32 @@
         <router-link :to="{name: 'Contact'}">
           Contact me
         </router-link>
+      </div>
+      <div
+        class="hamburger_container"
+        @click="handleHamburger"
+      >
+        <svg
+          ref="hamburger"
+          class="hamburger"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="13"
+        ><g
+          fill="#33323D"
+          fill-rule="evenodd"
+        ><path d="M0 0h24v1H0zM0 6h24v1H0zM0 12h24v1H0z" /></g></svg>
+        <svg
+          ref="close"
+          class="close"
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="19"
+        ><path
+          fill="#33323D"
+          fill-rule="evenodd"
+          d="M17.132.661l.707.707L9.707 9.5l8.132 8.132-.707.707L9 10.207.868 18.34l-.707-.707L8.293 9.5.161 1.368.868.661 9 8.793 17.132.661z"
+        /></svg>
       </div>
     </div>
     <!-- Buttons -->
@@ -64,6 +93,26 @@
   </div>
 </template>
 
+
+<script>
+import { ref } from 'vue'
+
+export default {
+  setup() {
+    const links = ref(null)
+    const hamburger = ref(null)
+    const close =ref(null)
+    const handleHamburger = () =>{
+      hamburger.value.classList.toggle('isinvisible')
+      close.value.classList.toggle('display_inline-block')
+      links.value.classList.toggle('nav_animation')
+    } 
+
+    return {handleHamburger, links, hamburger, close}
+  },
+}
+</script>
+
 <style>
 #app {
   font-family: 'Public Sans', sans-serif;
@@ -85,6 +134,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 8vh 8vw 0 8vw;
+  position: relative;
 }
 .links_container{
   width: 30rem;
@@ -104,12 +154,17 @@
 #nav a.router-link-exact-active {
   color: var(--slightly-desaturated-cayn)
 }
+.hamburger{
+  display: none;
+}
+.close{
+  display: none;
+}
 /* **********************Router animations ****************************/
 .fade-enter-active, 
 .fade-leave-active{
   transition: all .2s ease-in;
 }
-
 .fade-enter-from{
   opacity: 0;
 } 
@@ -117,4 +172,47 @@
   opacity: 0;
 }
 /* **********************responsive desingn ****************************/
+@media only screen and (max-width: 375px) {
+
+  .navigation_container{
+    margin: 2vh 8vw 0 8vw;
+  }
+  .links_container{
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    top: 8vh;
+    right: 0;
+    width: 22rem;
+    height: 19rem;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--grayish-dark-blue);
+
+    transition: all .5s ease-in-out;
+    transform: translateX(1000px);
+  }
+    #nav a {
+    color: #ffffff;
+  }
+  .hamburger_container{
+    display: block;
+    height: 100%;
+    width: 5rem;
+  }
+}
+
+/* **********************Animation ****************************/
+.nav_animation{
+  transform: translateX(0);
+}
+.hamburger{
+  display: inline-block;
+}
+.isinvisible {
+  display: none;
+}
+.display_inline-block{
+  display: inline-block;
+}
 </style>
