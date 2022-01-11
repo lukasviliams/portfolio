@@ -154,12 +154,9 @@ export default {
 #nav a.router-link-exact-active {
   color: var(--slightly-desaturated-cayn)
 }
-.hamburger{
+.hamburger, .close, .hamburger_container{
   display: none;
-}
-.close{
-  display: none;
-}
+} 
 /* **********************Router animations ****************************/
 .fade-enter-active, 
 .fade-leave-active{
@@ -200,14 +197,14 @@ export default {
     height: 100%;
     width: 5rem;
   }
+  .hamburger {
+    display: inline-block;
+  }
 }
 
 /* **********************Animation ****************************/
 .nav_animation{
   transform: translateX(0);
-}
-.hamburger{
-  display: inline-block;
 }
 .isinvisible {
   display: none;

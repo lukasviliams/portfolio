@@ -53,14 +53,14 @@ export default {
       // console.log(portrait);
       const visiblePortrait = function (entries) {
         const entry = entries[0]
-        console.log(entry);
+        // console.log(entry);
         if(entry.isIntersecting) {
           portrait.classList.add('visible')
         }
       }
       const observer = new IntersectionObserver(visiblePortrait, {
         root: null, 
-        threshold: 0
+        threshold: .5
       })
 
       observer.observe(portrait)
