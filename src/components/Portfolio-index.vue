@@ -241,12 +241,60 @@ export default {
 }
 }
 @media only screen and (max-width:920px) {
+  .index_container, .index_container-2 {
+    height: 42rem;
+  }
+  .index_container_text-parrent{
+    width: 50%;
+  }
 .index_container_text-container {
   height: 90%;
+  width: 90%;
 }
 .font-body1{
   font-size: 15px;
 }
+}
+
+@media only screen and (max-width: 730px) {
+  .index_container, .index_container-2 {
+    flex-direction: column;
+    height: 75rem
+  }
+  .index_container_text-parrent {
+    width: 70%;
+  }
+  .index_container_image-img{
+    width: 70%
+  }
+  .line {
+    width: 100%;
+  }
+  .index_container_image-container{
+    order: 0;
+  }
+  .index_container_text-parrent{
+    order: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .index_container, .index_container-2 {
+    margin: 5vh 0vw 8vh 0vw;
+    height: 71rem;
+  }
+  .index_container_text-parrent {
+    width: 76%;
+  }
+  .index_container_text-container {
+    justify-content: space-around;
+  }
+  .index_container_image-img{
+    width: 77.5%;
+  }
+  .font-h2, .font-body1 {
+    margin-bottom: 2rem;
+  }
 }
 
 /* *****************************Animation **********************************/

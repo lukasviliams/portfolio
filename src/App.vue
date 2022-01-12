@@ -169,7 +169,7 @@ export default {
   opacity: 0;
 }
 /* **********************responsive desingn ****************************/
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 450px) {
 
   .navigation_container{
     margin: 2vh 8vw 0 8vw;
