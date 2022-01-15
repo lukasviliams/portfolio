@@ -22,9 +22,12 @@
             This project required me to build a fully responsive landing page to the designs provided. 
             I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.
           </p>
-          <button class="btn-secondary">
+          <router-link
+            :to="{name:'Manage'}"
+            class="btn-secondary"
+          >
             View project
-          </button>
+          </router-link>
         </div>
         <div class="line" />
       </div>
@@ -40,9 +43,12 @@
             This project required me to build a fully responsive landing page to the designs provided. 
             I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.
           </p>
-          <button class="btn-secondary">
+          <router-link
+            :to="{name: 'Bookmark'}"
+            class="btn-secondary"
+          >
             View project
-          </button>
+          </router-link>
         </div>
         <div class="line" />
       </div>
@@ -76,9 +82,12 @@
             This was a small project which mostly consisted of HTML and CSS. 
             I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.
           </p>
-          <button class="btn-secondary">
+          <router-link
+            :to="{name: 'Insure'}"
+            class="btn-secondary"
+          >
             View project
-          </button>
+          </router-link>
         </div>
         <div class="line" />
       </div>
@@ -94,9 +103,12 @@
             This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. 
             I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.
           </p>
-          <button class="btn-secondary">
+          <router-link
+            :to="{name: 'Fylo'}"
+            class="btn-secondary"
+          >
             View project
-          </button>
+          </router-link>
         </div>
         <div class="line" />
       </div>
@@ -158,7 +170,6 @@ export default {
 
     })
   }
-
 }
 </script>
 
