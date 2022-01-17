@@ -1,24 +1,32 @@
 <template>
   <div class="index_parrent">
-    <div class="index_container-1">
-      <div class="line" />
-      <p class="font-h2">
-        Bookmark
-      </p>
-      <p class="font-body2">
-        This project required me to build a fully responsive landing page to the designs provided. 
-        I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.
-      </p>
-      <p class="font-body1">
-        Interaction Design / Front End Development
-      </p>
-      <p class="font-body1">
-        HTML / CSS / JS
-      </p>
-      <button class="btn-secondary">
-        Visit website
-      </button>
-      <div class="line" />
+    <div class="index_container-wrapper">
+      <div class="index_container-1">
+        <div class="line" />
+        <p class="font-h2">
+          Bookmark
+        </p>
+        <p class="font-body2">
+          This project required me to build a fully responsive landing page to the designs provided. 
+          I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.
+        </p>
+        <p class="font-body1">
+          Interaction Design / Front End Development
+        </p>
+        <p class="font-body1">
+          HTML / CSS / JS
+        </p>
+        <button class="btn-secondary">
+          Visit website
+        </button>
+        <div class="line" />
+      </div>
+      <div class="index_container-inner">
+        <p class="body_font-inner">
+          This project required me to build a fully responsive landing page to the designs provided. 
+          I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.
+        </p>
+      </div>
     </div>
     <div class="index_container-2">
       <p class="font-h3">
@@ -37,8 +45,10 @@
       <div class="imgContainer">
         <picture>
           <source>
-          <source>
-          <source>
+          <source
+            media="(max-width:768px)"
+            srcset="../assets/images/detail/tablet/image-bookmark-preview-1@2x.jpg"
+          >
           <img
             class="imgContainer-img"
             src="../assets/images/detail/desktop/image-bookmark-preview-1@2x.jpg"
@@ -49,8 +59,10 @@
       <div class="imgContainer">
         <picture>
           <source>
-          <source>
-          <source>
+          <source
+            media="(max-width: 768px)"
+            srcset="../assets/images/detail/tablet/image-bookmark-preview-2@2x.jpg"
+          >
           <img
             class="imgContainer-img"
             src="../assets/images/detail/desktop/image-bookmark-preview-2@2x.jpg"
@@ -76,6 +88,9 @@ export default {
   justify-content: space-between;
   align-items: flex-start;
 }
+.index_container-wrapper{
+  display: flex;
+}
 .index_container-1{
     display: flex;
     flex-direction: column;
@@ -97,6 +112,17 @@ export default {
 .font-body2{
     text-align: left;
     margin-bottom: 3vh;
+}
+
+.body_font-inner {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0;
+
+    text-align: left;
+    display: none;
 }
 .index_container-1 > .font-body2 {
     height: 15rem;
@@ -128,5 +154,91 @@ export default {
 .imgContainer-img{
   width: 100%;
   height: auto;
+}
+@media only screen and (max-width: 1250px) {
+  .index_parrent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .index_container-1 > .font-body2 {
+    display: none;
+  }
+  .body_font-inner {
+    width: 34rem;
+    height: 15rem;
+    display: flex;
+    margin-top: 4vh;
+  }
+  .index_container-1 {
+    margin: 0;
+  }
+  .line {
+    display: none;
+  }
+  .index_container-wrapper {
+    width: 84%;
+    justify-content: space-evenly ;
+    border-top: 1px solid rgba(51,50,61, .2);
+    border-bottom: 1px solid rgba(51,50,61, .2);
+    margin-bottom: 5vh;
+  }
+  .font-body1 {
+    margin-bottom: 1rem;
+  }
+  .font-h2 {
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+  }
+  .index_container-2 {
+    width: 84%;
+    margin: 0;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .index_container-wrapper {
+    justify-content: space-between;
+  }
+  .font-body1 {
+    font-size: 13px;
+  }
+  .index_container-2 {
+    align-items: flex-start;
+  }
+  .imgContainer-img {
+    margin-bottom: 3vh;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .index_container-1 > .font-body2 {
+    display: block;
+  }
+  .body_font-inner {
+    display: none;
+  }
+  .index_container-1 {
+    width: 100%;
+    align-items: center;
+  }
+  .index_container-2 {
+    align-items: center;
+  }
+  .imgContainer {
+    width: 43rem;
+  }
+  .index_container-2 > .font-body2 {
+    height: fit-content;
+    width: 43rem;
+}
+}
+@media only screen and (max-width: 540px) {
+  .imgContainer, .index_container-2 > .font-body2  {
+    width: 100%;
+  }
+  .index_container-2, .index_container-1 {
+    align-items: flex-start;
+  }
 }
 </style>

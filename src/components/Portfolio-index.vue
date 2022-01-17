@@ -25,6 +25,7 @@
           <router-link
             :to="{name:'Manage'}"
             class="btn-secondary"
+            onmouseover="style.color = '#ffffff"
           >
             View project
           </router-link>
@@ -174,6 +175,9 @@ export default {
 </script>
 
 <style scoped>
+.index_parrent{
+  overflow: hidden;
+}
 .index_container {
     display: flex;
     justify-content: flex-start;

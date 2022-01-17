@@ -144,7 +144,7 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
-#nav a {
+a {
   color: var(--grayish-dark-blue);
   text-decoration: none;
   font-size: 12px;
@@ -177,7 +177,7 @@ export default {
     margin: 2vh 8vw 0 8vw;
   }
   .links_container{
-    display: flex;
+    display: none;
     position: absolute;
     z-index: 100;
     top: 8vh;
@@ -191,7 +191,7 @@ export default {
     transition: all .5s ease-in-out;
     transform: translateX(1000px);
   }
-    #nav a {
+  a {
     color: #ffffff;
   }
   .hamburger_container{
@@ -207,6 +207,7 @@ export default {
 /* **********************Animation ****************************/
 .nav_animation{
   transform: translateX(0);
+  display: flex;
 }
 .isinvisible {
   display: none;

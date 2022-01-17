@@ -48,4 +48,9 @@ export default {
     object-fit: fill;
     display: block;
   }
+  @media only screen and (max-width: 450px) {
+    .hero_parrent {
+      margin-top: 5vh;
+    }
+  }
 </style>

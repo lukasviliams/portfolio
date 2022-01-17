@@ -55,7 +55,7 @@ export default {
 }
 .line{
     width: calc(100% - (38rem + 192px));
-    border-bottom: 1px solid var(--grayish-dark-blue);;
+    border-bottom: 1px solid rgba(51,50,61, .2);
 }
 .visible{
   opacity: 1;
