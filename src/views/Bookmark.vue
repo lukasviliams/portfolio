@@ -1,8 +1,8 @@
 <template>
   <div class="bookmark">
-    <IndexHero />
-    <index-content />
-    <index-router />
+    <bookmark-hero />
+    <bookmark-content />
+    <bookmark-router />
     <footer-contact />
     <footer-component />
   </div>
@@ -11,13 +11,10 @@
 <script>
 import FooterComponent from '../components/Footer-component.vue';
 import FooterContact from '../components/Footer-contact.vue';
-import IndexContent from '../components/Index-content.vue';
-import IndexHero from "../components/index-hero.vue";
-import IndexRouter from '../components/Index-router.vue';
+import BookmarkContent from '../components/Bookmark-content.vue';
+import BookmarkRouter from '../components/Bookmark-router.vue';
+import BookmarkHero from '../components/Bookmark-hero.vue';
 export default {
-    components: { IndexHero, IndexContent, FooterComponent, FooterContact, IndexRouter }
+    components: { FooterComponent, FooterContact,BookmarkHero, BookmarkContent, BookmarkRouter }
 }
 </script>
-
-<style>
-</style>

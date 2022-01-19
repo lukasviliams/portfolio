@@ -4,11 +4,11 @@
       <div class="index_container-1">
         <div class="line" />
         <p class="font-h2">
-          Bookmark
+          Insure
         </p>
         <p class="font-body2">
-          This project required me to build a fully responsive landing page to the designs provided. 
-          I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.
+          This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. 
+          The only JavaScript this project required was to enable the toggling of the mobile navigation.
         </p>
         <p class="font-body1">
           Interaction Design / Front End Development
@@ -23,8 +23,8 @@
       </div>
       <div class="index_container-inner">
         <p class="body_font-inner">
-          This project required me to build a fully responsive landing page to the designs provided. 
-          I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.
+          This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. 
+          The only JavaScript this project required was to enable the toggling of the mobile navigation.
         </p>
       </div>
     </div>
@@ -33,7 +33,7 @@
         Project Background
       </p>
       <p class="font-body2">
-        This project was a front-end challenge from Frontend Mentor. 
+        This project was a front-end  challenge from Frontend Mentor. 
         It’s a platform that enables you to practice building websites to a design and project brief. 
         Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. 
         Creating these projects has helped me refine my workflow and solve real-world coding problems. 
@@ -44,28 +44,34 @@
       </p>
       <div class="imgContainer">
         <picture>
-          <source>
+          <source
+            media="(max-width: 375px)"
+            srcset="../assets/images/detail/mobile/image-insure-preview-1@2x.jpg"
+          >
           <source
             media="(max-width:768px)"
-            srcset="../assets/images/detail/tablet/image-bookmark-preview-1@2x.jpg"
+            srcset="../assets/images/detail/tablet/image-insure-preview-1@2x.jpg"
           >
           <img
             class="imgContainer-img"
-            src="../assets/images/detail/desktop/image-bookmark-preview-1@2x.jpg"
+            src="../assets/images/detail/desktop/image-insure-preview-1@2x.jpg"
             alt="Could not fetch img please check the source"
           >
         </picture>
       </div>
       <div class="imgContainer">
         <picture>
-          <source>
+          <source
+            media="(max-width:375px)"
+            srcset="../assets/images/detail/mobile/image-insure-preview-2@2x.jpg"
+          >
           <source
             media="(max-width: 768px)"
-            srcset="../assets/images/detail/tablet/image-bookmark-preview-2@2x.jpg"
+            srcset="../assets/images/detail/tablet/image-insure-preview-2@2x.jpg"
           >
           <img
             class="imgContainer-img"
-            src="../assets/images/detail/desktop/image-bookmark-preview-2@2x.jpg"
+            src="../assets/images/detail/desktop/image-insure-preview-2@2x.jpg"
             alt="Could not fetch img please check the source"
           >
         </picture>
