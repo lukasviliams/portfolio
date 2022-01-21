@@ -126,4 +126,9 @@ export default {
     width: 100%;
 }
 }
+@media only screen and (max-width:450px) {
+  .contct_content-parrent {
+    margin-top: 5vh;
+}
+}
 </style>

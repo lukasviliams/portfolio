@@ -146,7 +146,7 @@ export default {
       const obsCallIndexTwo = function (entries) {
         entries.forEach(entry =>{
           entry.target.classList.toggle('default', entry.isIntersecting)
-          console.log(entry);
+          // console.log(entry);
           if(entry.isIntersecting) obsRight.unobserve(entry.target)
         })
       }

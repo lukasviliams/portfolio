@@ -26,7 +26,10 @@
         <p class="font-h1">
           Hey, I’m Alex Spencer and I love building beautiful websites
         </p>
-        <button class="btn-primary">
+        <a
+          href="#about"
+          class="btn-primary"
+        >
           <svg
             class="btn-svg"
             xmlns="http://www.w3.org/2000/svg" 
@@ -52,7 +55,7 @@
             </g>
           </svg>
           About me
-        </button>
+        </a>
       </div>
     </div>
   </div>

@@ -1,5 +1,8 @@
 <template>
-  <div class="hero_portrait-component">
+  <div
+    id="about"
+    class="hero_portrait-component"
+  >
     <picture>
       <source
         media="(max-width: 670px)"
@@ -25,7 +28,9 @@
         <p class="font-h2">
           About Me
         </p>
-        <p class="font-body1">
+        <p
+          class="font-body1"
+        >
           I’m a junior front-end developer looking for a new role in an exciting company. 
           I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript. 
           When writing JavaScript code, I mostly use React, but I can adapt to whatever tools are required. 
@@ -35,9 +40,12 @@
           I’d love you to check out my work.
         </p>
       </div>
-      <button class="btn-secondary">
+      <router-link
+        :to="{name:'Portfolio'}"
+        class="btn-secondary"
+      >
         Go to portfolio
-      </button>
+      </router-link>
       <div class="line" />
     </div>
   </div>

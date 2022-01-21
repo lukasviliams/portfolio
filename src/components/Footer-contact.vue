@@ -5,9 +5,12 @@
         Interested in doing a project together?
       </p>
       <div class="line" />
-      <button class="btn-secondary">
+      <router-link
+        :to="{name:'Contact'}"
+        class="btn-secondary"
+      >
         Contact me
-      </button>
+      </router-link>
     </div>
   </div>
 </template>
