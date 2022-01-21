@@ -114,4 +114,16 @@ export default {
   height: 1px;
   background-color: rgba(51,50,61, .2);
 }
+@media only screen and (max-width: 768px) {
+  .content_container {
+    flex-direction: column;
+  }
+  .content_container-header {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.content_container-bodytext {
+    width: 100%;
+}
+}
 </style>

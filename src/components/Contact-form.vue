@@ -53,6 +53,9 @@ export default {
 </script>
 
 <style scoped>
+.contact_form_parrent {
+  margin-bottom: 10vh;
+}
 .content_container {
   margin: 0 8vw 6vh 8vw;
   display: flex;
@@ -119,5 +122,17 @@ label {
 .btn-primary{
   width: 15.2rem;
   justify-content: center;
+}
+@media only screen and (max-width:768px) {
+  .content_container {
+    flex-direction: column;
+  }
+  .content_container-header{
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.content_container-content {
+  width: 100%;
+}
 }
 </style>
