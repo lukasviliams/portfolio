@@ -7,17 +7,21 @@
         </p>
       </div>
       <div class="content_container-content">
-        <form class="content_container-form">
+        <vee-form
+          class="content_container-form" 
+          :validation-schema="schema"
+        >
           <label
             for="text"
           >Name</label>
-          <input
+          <vee-field
             id="text"
             type="text"
             placeholder="Jane Apleseed"
             name="text"
             class="input_text"
-          >
+          />
+          <ErrorMessage name="text" />
           <label
             for="email"
           >Email address</label>
@@ -40,7 +44,7 @@
           <button class="btn-primary">
             Send message
           </button>
-        </form>
+        </vee-form>
       </div>
     </div>
   </div>
@@ -48,6 +52,14 @@
 
 <script>
 export default {
+  name:'ContactForm',
+  data(){
+    return {
+      schema: {
+        text: 'required',
+      }
+    }
+  }
 
 }
 </script>
