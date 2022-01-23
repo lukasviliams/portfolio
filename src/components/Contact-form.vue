@@ -21,7 +21,10 @@
             name="name"
             class="input_text"
           />
-          <ErrorMessage name="name" />
+          <ErrorMessage
+            name="name"
+            class="red"
+          />
           <label
             for="email"
           >Email address</label>
@@ -32,7 +35,10 @@
             placeholder="email@example.com"
             class="input_email"
           />
-          <ErrorMessage name="email" />
+          <ErrorMessage
+            name="email"
+            class="red"
+          />
           <label
             for="textarea"
           >Message</label>
@@ -137,6 +143,10 @@ label {
   width: 15.2rem;
   justify-content: center;
 }
+.red {
+  color: var(--bright-red);
+}
+/* ***********************Responsive design************************** */
 @media only screen and (max-width:768px) {
   .content_container {
     flex-direction: column;
