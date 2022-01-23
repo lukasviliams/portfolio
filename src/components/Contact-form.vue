@@ -12,26 +12,27 @@
           :validation-schema="schema"
         >
           <label
-            for="text"
+            for="name"
           >Name</label>
           <vee-field
-            id="text"
-            type="text"
+            id="name"
+            type="name"
             placeholder="Jane Apleseed"
-            name="text"
+            name="name"
             class="input_text"
           />
-          <ErrorMessage name="text" />
+          <ErrorMessage name="name" />
           <label
             for="email"
           >Email address</label>
-          <input
+          <vee-field
             id="email"
             type="email"
             name="email"
             placeholder="email@example.com"
             class="input_email"
-          >
+          />
+          <ErrorMessage name="email" />
           <label
             for="textarea"
           >Message</label>
@@ -56,7 +57,8 @@ export default {
   data(){
     return {
       schema: {
-        text: 'required',
+        name: 'required|min:3|max:100|alpha_spaces',
+        email:'required|min:3|max:100|email',
       }
     }
   }
