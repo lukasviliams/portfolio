@@ -58,7 +58,7 @@
           <img
             class="index_container_image-img"
             src="../assets/images/portfolio/desktop/image-portfolio-bookmark.jpg"
-            alt="Could not check img please check source"
+            alt="img"
           >
         </picture>
       </div>
@@ -69,7 +69,7 @@
           <img
             class="index_container_image-img"
             src="../assets/images/portfolio/desktop/image-portfolio-insure.jpg"
-            alt="Could not check img please check source"
+            alt="img"
           >
         </picture>
       </div>
@@ -118,7 +118,7 @@
           <img
             class="index_container_image-img"
             src="../assets/images/portfolio/desktop/image-portfolio-fylo.jpg"
-            alt="Could not check img please check source"
+            alt="img"
           >
         </picture>
       </div>
@@ -185,7 +185,7 @@ export default {
     margin: 10vh 0vw 14vh 8vw;
     height: 50rem;
     gap: 7vw;
-    transform: translateX(100%);
+    transform: translateX(90%);
     transition: all 1s ease-in;
 }
 .index_container-2 {
@@ -195,7 +195,7 @@ export default {
   margin: 10vh 0vw 14vh 8vw;
   height: 50rem;
   gap: 7vw;
-  transform: translateX(-100%);
+  transform: translateX(-90%);
   transition: all 1s ease-in;
 }
 .index_container_image-container{

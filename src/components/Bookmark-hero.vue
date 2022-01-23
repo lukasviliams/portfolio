@@ -17,7 +17,7 @@
         <img
           class="hero_img"
           src="../assets/images/detail/desktop/image-bookmark-hero@2x.jpg"
-          alt="Could not fetch img please check the source"
+          alt="img"
         >
       </picture>
     </div>

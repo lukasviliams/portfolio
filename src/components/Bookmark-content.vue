@@ -55,7 +55,7 @@
           <img
             class="imgContainer-img"
             src="../assets/images/detail/desktop/image-bookmark-preview-1@2x.jpg"
-            alt="Could not fetch img please check the source"
+            alt="img"
           >
         </picture>
       </div>
@@ -72,7 +72,7 @@
           <img
             class="imgContainer-img"
             src="../assets/images/detail/desktop/image-bookmark-preview-2@2x.jpg"
-            alt="Could not fetch img please check the source"
+            alt="img"
           >
         </picture>
       </div>
